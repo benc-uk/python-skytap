@@ -3,8 +3,9 @@
 import sys
 sys.path.append("..")
 from Skytap import Skytap
+import credentials
 
-api = Skytap.SkytapAPI('bcoleman_solo', '01ba4318b714bc11744f4c88b5c95c400f5d4c4c')
+api = Skytap.SkytapAPI(credentials.api_user, credentials.api_key)
 
 VM_TEMPLATE_ID = '771869'
 ENV_ID = sys.argv[1]
