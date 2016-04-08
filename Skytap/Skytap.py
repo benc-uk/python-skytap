@@ -35,6 +35,13 @@ class SkytapAPI:
         return self.__restCall('GET', '/v2/configurations/'+str(env_id))
 
     #
+    #  Get environment's published sets
+    #  GET https://cloud.skytap.com/v2/configurations/{id}/publish_sets
+    #
+    def getEnvironmentPubSets(self, env_id):
+        return self.__restCall('GET', '/v2/configurations/'+str(env_id)+'/publish_sets')
+
+    #
     #  Get VM details
     #  GET https://cloud.skytap.com/v2/configurations/{id}/vms/{id}
     #
